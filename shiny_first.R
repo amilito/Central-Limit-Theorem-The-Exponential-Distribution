@@ -46,7 +46,6 @@ server <- function(input, output) {
   })
   
   library(ggplot2)
-  # image1 creates a new PNG file each time Radius changes
   output$image <- renderPlot({
     p <- ggplot(X(),aes(x = X)) + 
       geom_histogram(aes(y = ..density..),binwidth = 0.3, color = "gray36", fill = "gray33") +
