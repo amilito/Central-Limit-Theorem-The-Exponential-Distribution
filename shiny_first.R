@@ -1,4 +1,5 @@
 library(shiny)
+library(stats)
 library(shinythemes)
 library(ggplot2)
 
@@ -17,7 +18,6 @@ ui <- fluidPage(
 
 
 smean <- function(n,a){ 
-  library(stats)
   x <- rexp(n, rate=a) 
   y <- ((1/n) * sum(x) - 1/a) / sqrt((1/a^2)/n)
   return(y)
